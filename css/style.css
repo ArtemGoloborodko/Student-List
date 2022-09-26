@@ -15,6 +15,10 @@ html {
   max-width: 1920px;
 }
 
+.flex {
+  display: flex;
+}
+
 .head_table__cursor {
   cursor: pointer;
 }
@@ -34,4 +38,44 @@ html {
 .btn-disable {
   position: absolute;
   right: 50px;
+}
+
+.filter_close {
+  display: none;
+}
+
+.filter_open {
+  display: flex;
+}
+
+
+.btn_close {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.from_svg {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out; 
+}
+
+.from_svg_trans {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 950px){
+
+  .filter_open {
+    flex-direction: column;
+  }
+
+  .form-filter:not(:first-child) {
+    margin-left: 0px;
+  }
+  
 }

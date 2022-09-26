@@ -2,7 +2,7 @@ import Worker from './script.js' // импортируем таким образ
 
 //массив сотрудников 
 const workers = [
-/*     new Worker('Артем', 'Голобородько', 'Алексеевич', 2010, new Date(1989, 8, 25), 'Программист'),
+    /* new Worker('Артем', 'Голобородько', 'Алексеевич', 2010, new Date(1989, 8, 25), 'Программист'),
     new Worker('Иван', 'Сельниченко', 'Дмитриевич', 2016, new Date(2010, 6, 15), 'Повар'),
     new Worker('Игорь', 'Кувшинников', 'Вячеславович', 2008, new Date(1988, 4, 12), 'Слесарь'), */
 ]
@@ -256,6 +256,16 @@ function checkRequired(inputElements) {
        new Worker (worker.name, worker.surename, worker.lastname, worker.workStart, new Date(worker.birthData), worker.post),
      )
    }
+
+
+   const btnClose = document.getElementById('filter-btn-close')
+   const blockFilter = document.getElementById('filter-worker')
+   const svg = document. querySelector('.from_svg')
+
+   btnClose.addEventListener('click', function(){
+    blockFilter.classList.toggle('filter_open')
+    svg.classList.toggle('from_svg_trans')
+   })
 
 render(workers)
 
