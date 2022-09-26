@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+
+.container {
+  width: 0 auto;
+  padding: 20px 50px;
+  max-width: 1920px;
+}
+
+.head_table__cursor {
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+}
+
+.form-filter:not(:first-child) {
+  margin-left: 30px;
+}
+
+.tr-group {
+  position: relative;
+}
+
+.btn-disable {
+  position: absolute;
+  right: 50px;
+}
